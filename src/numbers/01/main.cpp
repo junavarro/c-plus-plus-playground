@@ -13,12 +13,14 @@ int positive_sum (const std::vector<int> arr){
     // f(num) = 1 if num > 0, 
     // f(num) = 0 if num < 0
     // the and expression is used to turn on/off based on the sign of num
+
+    // 1111 1011 => - (0000 0100) >> 0
     result += ((~num) >> shift) & num;
   }
   return result;
 }
 
 int main() {
-    std::cout << "Sum psotives: "  << positive_sum ({1,2,4,-5,3,-1}) << "\n";
+    std::cout << "Sum positives: "  << positive_sum ({1,2,4,-5,3,-1}) << "\n";
     return 0;
 }
